@@ -5,7 +5,7 @@ metadata:
   labels:
     app: pick-front
 spec:
-  type: pick-front
+  type: LoadBalancer
   selector:
     app: pick-front
   ports:

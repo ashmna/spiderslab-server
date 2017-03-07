@@ -12,7 +12,7 @@ spec:
       containers:
       - name: mongo
         image: mongo
-#        args: ["--auth"]
+        args: ["--auth"]
         volumeMounts:
         - mountPath: /data/db
           name: mongo-volume
