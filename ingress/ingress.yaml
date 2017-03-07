@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: spiderslab
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
+spec:
+#  backend:
+#    serviceName: test
+#    servicePort: 80
+  tls:
+    - hosts:
+      - spiderslab.com
+      - pick.spiderslab.com
+      secretName: spiderslab-tls
+  rules:
+    - host: spiderslab.com
+      http:
+        paths:
+        - path: /api/pick/*
+          backend:
+            serviceName: pick
+            servicePort: 80
+        - path: /*
+          backend:
+            serviceName: spiderslab-site
+            servicePort: 80
+    - host: pick.spiderslab.com
+      http:
+        paths:
+        - path: /api/v1/*
+          backend:
+            serviceName: pick
+            servicePort: 80
+        - path: /*
+          backend:
+            serviceName: pick-front
+            servicePort: 80

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pick-front
+  labels:
+    app: pick-front
+spec:
+  type: pick-front
+  selector:
+    app: pick-front
+  ports:
+    - port: 80
+      targetPort: 80
