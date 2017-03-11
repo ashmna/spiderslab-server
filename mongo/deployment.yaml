@@ -18,7 +18,6 @@ spec:
           name: mongo-volume
       volumes:
       - name: mongo-volume
-        # This GCE PD must already exist.
         gcePersistentDisk:
           pdName: mongo-volume
           fsType: ext4
