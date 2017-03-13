@@ -20,6 +20,20 @@ spec:
         - name: MONGODB_PORT
           value: "27017"
         - name: MONGODB_USERNAME
-          value: "********"
+          value: "pick"
         - name: MONGODB_PASSWORD
-          value: "********"
+          value: "6B87V0cF4syl8jd1Qlw5RihXJb3ZyMPP"
+        volumeMounts:
+        - mountPath: /pick/data
+          name: pick-data
+        - mountPath: /pick/model
+          name: pick-model
+      volumes:
+      - name: pick-data
+        gcePersistentDisk:
+          pdName: pick-data
+          fsType: ext4
+      - name: pick-model
+        gcePersistentDisk:
+          pdName: pick-model
+          fsType: ext4
