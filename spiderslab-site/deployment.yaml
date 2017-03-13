@@ -12,3 +12,12 @@ spec:
       containers:
       - name: spiderslab-site
         image: ashmna/spiderslab-site
+        imagePullPolicy: Always
+#        volumeMounts:
+#        - mountPath: /usr/src/app/data
+#          name: pick-data
+#      volumes:
+#      - name: pick-data
+#        gcePersistentDisk:
+#          pdName: pick-data
+#          fsType: ext4

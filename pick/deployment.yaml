@@ -12,6 +12,7 @@ spec:
       containers:
       - name: pick
         image: ashmna/pick
+        imagePullPolicy: Always
         env:
         - name: MONGODB_NAME
           value: "pick"

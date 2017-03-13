@@ -17,9 +17,9 @@ kubectl apply -f ./pick/deployment.yaml
 kubectl apply -f ./pick/service.yaml
 
 # kube-lego
-kubectl apply -f ./kube-lego/namespace.yaml
-kubectl apply -f ./kube-lego/configmap.yaml
-kubectl apply -f ./kube-lego/deployment.yaml
+# kubectl apply -f ./kube-lego/namespace.yaml
+# kubectl apply -f ./kube-lego/configmap.yaml
+# kubectl apply -f ./kube-lego/deployment.yaml
 
 # ingress
 kubectl apply -f ./ingress/ingress.yaml
