@@ -22,4 +22,4 @@ kubectl apply -f ./pick/service.yaml
 # kubectl apply -f ./kube-lego/deployment.yaml
 
 # ingress
-kubectl apply -f ./ingress/ingress.yaml
+# kubectl apply -f ./ingress/ingress.yaml

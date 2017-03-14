@@ -13,5 +13,7 @@ spec:
       - name: pick-front
         image: ashmna/pick-front
         imagePullPolicy: Always
-երեվան => երևան
-երևան => երեվան
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80

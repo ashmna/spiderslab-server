@@ -29,6 +29,10 @@ spec:
           name: pick-data
         - mountPath: /pick/model
           name: pick-model
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
       volumes:
       - name: pick-data
         gcePersistentDisk:
