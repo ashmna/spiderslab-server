@@ -13,10 +13,12 @@ spec:
       - name: spiderslab-site
         image: ashmna/spiderslab-site
         imagePullPolicy: Always
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3001
+#        ports:
+#        - containerPort: 3001
+#        livenessProbe:
+#          httpGet:
+#            path: /
+#            port: 3001
 #        volumeMounts:
 #        - mountPath: /usr/src/app/data
 #          name: pick-data

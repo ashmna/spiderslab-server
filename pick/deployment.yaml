@@ -17,7 +17,7 @@ spec:
         - name: MONGODB_NAME
           value: "pick"
         - name: MONGODB_HOST
-          value: "mongo"
+          value: "localhost"
         - name: MONGODB_PORT
           value: "27017"
         - name: MONGODB_USERNAME
@@ -29,10 +29,10 @@ spec:
           name: pick-data
         - mountPath: /pick/model
           name: pick-model
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3000
+#        livenessProbe:
+#          httpGet:
+#            path: /
+#            port: 3000
       volumes:
       - name: pick-data
         gcePersistentDisk:
