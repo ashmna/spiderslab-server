@@ -17,7 +17,7 @@ spec:
         - name: MONGODB_NAME
           value: "pick"
         - name: MONGODB_HOST
-          value: "localhost"
+          value: "mongo"
         - name: MONGODB_PORT
           value: "27017"
         - name: MONGODB_USERNAME
