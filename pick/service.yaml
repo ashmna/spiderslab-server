@@ -5,7 +5,8 @@ metadata:
   labels:
     app: pick
 spec:
-  type: LoadBalancer
+#  type: LoadBalancer
+  type: NodePort
   selector:
     app: pick
   ports:

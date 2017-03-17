@@ -5,7 +5,8 @@ metadata:
   labels:
     app: spiderslab-site
 spec:
-  type: LoadBalancer
+#  type: LoadBalancer
+  type: NodePort
   selector:
     app: spiderslab-site
   ports:
